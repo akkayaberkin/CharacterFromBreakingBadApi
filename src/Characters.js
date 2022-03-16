@@ -1,6 +1,6 @@
 import React from "react";
 import Character from "./Character";
-const Tours = ({ characters, removeTour }) => {
+const Charactes = ({ characters, removeCharacter }) => {
   return (
     <section>
       <div className="title">
@@ -13,7 +13,7 @@ const Tours = ({ characters, removeTour }) => {
             <Character
               key={character.char_id}
               {...character}
-              removeTour={removeTour}
+              removeCharacter={removeCharacter}
             ></Character>
           );
         })}
@@ -22,4 +22,4 @@ const Tours = ({ characters, removeTour }) => {
   );
 };
 
-export default Tours;
+export default Charactes;

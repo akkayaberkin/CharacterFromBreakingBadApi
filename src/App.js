@@ -4,11 +4,11 @@ import Characters from "./Characters";
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
 // const url = "https://course-api.com/react-tours-project";
-const url = "https://breakingbadapi.com/api/characters?limit=5&offset=5";
+const url = "https://breakingbadapi.com/api/characters?limit=5&offset=0";
 function App() {
   const [loading, setLoading] = useState(true);
   const [characters, setCharacter] = useState([]);
-  const removeTour = (char_id) => {
+  const removeCharacter = (char_id) => {
     const newCharacter = characters.filter(
       (character) => character.char_id !== char_id
     );
@@ -52,7 +52,7 @@ function App() {
   }
   return (
     <main>
-      <Characters characters={characters} removeTour={removeTour} />
+      <Characters characters={characters} removeCharacter={removeCharacter} />
     </main>
   );
 }
